@@ -27,7 +27,7 @@ def ag_taramasi(ip):
     # modeme bir yayin istegi gondermek icin bir yayin paketi olusturuyoruz
     yayin_paketi = scapy.Ether(dst="ff:ff:ff:ff:ff:ff")
     birlesmis_paket = yayin_paketi / arp_istek_paketi
-    (cevaplanalar, cevaplananlar) = scapy.srp(birlesmis_paket, timeout=1)
+    (cevaplananlar, cevaplanmayanlar) = scapy.srp(birlesmis_paket, timeout=1)
     cevaplananlar.summary()
 
 
